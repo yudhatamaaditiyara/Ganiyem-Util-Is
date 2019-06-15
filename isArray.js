@@ -18,7 +18,7 @@
 const toString = {}.toString;
 
 /**
- * @params {any} value
+ * @param {any} value
  * @returns {boolean}
  */
 module.exports = Array.isArray || ((value) => toString.call(value) === '[object Array]');

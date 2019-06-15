@@ -18,7 +18,7 @@
 const toString = {}.toString;
 
 /**
- * @params {any} value
+ * @param {any} value
  * @returns {boolean}
  */
 module.exports = (value) => toString.call(value) === '[object Date]';

@@ -18,7 +18,7 @@
 const types = {'string': 1, 'number': 1, 'boolean': 1, 'symbol': 1};
 
 /**
- * @params {any} value
+ * @param {any} value
  * @returns {boolean}
  */
 module.exports = (value) => (value == null || typeof value in types);

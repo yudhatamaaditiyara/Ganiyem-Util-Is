@@ -16,7 +16,7 @@
 'use strict';
 
 /**
- * @params {any} value
+ * @param {any} value
  * @returns {boolean}
  */
 module.exports = (value) => value == null;
