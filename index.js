@@ -27,6 +27,7 @@ module.exports = {
 	isNull: require("./lib/isNull"),
 	isNullOrUndefined: require("./lib/isNullOrUndefined"),
 	isNumber: require("./lib/isNumber"),
+	isObject: require("./lib/isObject"),
 	isPrimitive: require("./lib/isPrimitive"),
 	isRegExp: require("./lib/isRegExp"),
 	isString: require("./lib/isString"),
