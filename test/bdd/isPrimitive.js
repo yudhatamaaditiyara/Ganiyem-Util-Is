@@ -13,75 +13,75 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const {isPrimitive} = require("../../");
+const assert = require('assert');
+const {isPrimitive} = require('../../');
 
 /**
  */
-describe("isPrimitive", () => {
+describe('isPrimitive', () => {
 	/**
 	 */
-	it("type of function", () => {
-		assert.strictEqual(typeof isPrimitive, "function");
+	it('type of function', () => {
+		assert.strictEqual(typeof isPrimitive, 'function');
 	});
 
 	/**
 	 */
-	it("isPrimitive() === true", () => {
+	it('isPrimitive() === true', () => {
 		assert.ok(isPrimitive());
     });
 
     /**
 	 */
-	it("isPrimitive(null) === true", () => {
+	it('isPrimitive(null) === true', () => {
 		assert.ok(isPrimitive(null));
     });
 
     /**
 	 */
-	it("isPrimitive(undefined) === true", () => {
+	it('isPrimitive(undefined) === true', () => {
 		assert.ok(isPrimitive(undefined));
     });
 
     /**
 	 */
-	it("isPrimitive('foo') === true", () => {
-		assert.ok(isPrimitive("foo"));
+	it('isPrimitive("foo") === true', () => {
+		assert.ok(isPrimitive('foo'));
     });
 
     /**
 	 */
-	it("isPrimitive(123) === true", () => {
+	it('isPrimitive(123) === true', () => {
 		assert.ok(isPrimitive(123));
     });
 
     /**
 	 */
-	it("isPrimitive(false) === true", () => {
+	it('isPrimitive(false) === true', () => {
 		assert.ok(isPrimitive(false));
     });
 
     /**
 	 */
-	it("isPrimitive(Symbol('foo')) === true", () => {
-		assert.ok(isPrimitive(Symbol("foo")));
+	it('isPrimitive(Symbol("foo")) === true', () => {
+		assert.ok(isPrimitive(Symbol('foo')));
     });
 
     /**
 	 */
-	it("isPrimitive(new String('foo')) === false", () => {
-		assert.ok(!isPrimitive(new String("foo")));
+	it('isPrimitive(new String("foo")) === false', () => {
+		assert.ok(!isPrimitive(new String('foo')));
     });
 
     /**
 	 */
-	it("isPrimitive(new Number(123)) === false", () => {
+	it('isPrimitive(new Number(123)) === false', () => {
 		assert.ok(!isPrimitive(new Number(123)));
     });
 
     /**
 	 */
-	it("isPrimitive(new Boolean(false)) === false", () => {
+	it('isPrimitive(new Boolean(false)) === false', () => {
 		assert.ok(!isPrimitive(new Boolean(false)));
     });
 });

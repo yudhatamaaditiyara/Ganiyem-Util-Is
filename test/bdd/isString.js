@@ -13,45 +13,45 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const {isString} = require("../../");
+const assert = require('assert');
+const {isString} = require('../../');
 
 /**
  */
-describe("isString", () => {
+describe('isString', () => {
 	/**
 	 */
-	it("type of function", () => {
-		assert.strictEqual(typeof isString, "function");
+	it('type of function', () => {
+		assert.strictEqual(typeof isString, 'function');
 	});
 
 	/**
 	 */
-	it("isString() === false", () => {
+	it('isString() === false', () => {
 		assert.ok(!isString());
     });
 
     /**
 	 */
-	it("isString('foo') === true", () => {
-		assert.ok(isString("foo"));
+	it('isString("foo") === true', () => {
+		assert.ok(isString('foo'));
     });
 
     /**
 	 */
-	it("isString(new String('foo')) === false", () => {
-		assert.ok(!isString(new String("foo")));
+	it('isString(new String("foo")) === false', () => {
+		assert.ok(!isString(new String('foo')));
     });
 
     /**
 	 */
-	it("isString(Symbol('foo')) === false", () => {
-		assert.ok(!isString(Symbol("foo")));
+	it('isString(Symbol("foo")) === false', () => {
+		assert.ok(!isString(Symbol('foo')));
     });
     
     /**
 	 */
-	it("isString(123) === false", () => {
+	it('isString(123) === false', () => {
 		assert.ok(!isString(123));
     });
 });

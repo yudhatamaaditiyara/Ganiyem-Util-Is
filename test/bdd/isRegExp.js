@@ -13,39 +13,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const {isRegExp} = require("../../");
+const assert = require('assert');
+const {isRegExp} = require('../../');
 
 /**
  */
-describe("isRegExp", () => {
+describe('isRegExp', () => {
 	/**
 	 */
-	it("type of function", () => {
-		assert.strictEqual(typeof isRegExp, "function");
+	it('type of function', () => {
+		assert.strictEqual(typeof isRegExp, 'function');
 	});
 
 	/**
 	 */
-	it("isRegExp() === false", () => {
+	it('isRegExp() === false', () => {
 		assert.ok(!isRegExp());
     });
 
     /**
 	 */
-	it("isRegExp(/foo/) === true", () => {
+	it('isRegExp(/foo/) === true', () => {
 		assert.ok(isRegExp(/foo/));
     });
 
     /**
 	 */
-	it("isRegExp(new RegExp('foo')) === true", () => {
-		assert.ok(isRegExp(new RegExp("foo")));
+	it('isRegExp(new RegExp("foo")) === true', () => {
+		assert.ok(isRegExp(new RegExp('foo')));
     });
 
     /**
 	 */
-	it("isRegExp('foo') === false", () => {
-		assert.ok(!isRegExp("foo"));
+	it('isRegExp("foo") === false', () => {
+		assert.ok(!isRegExp('foo'));
     });
 });

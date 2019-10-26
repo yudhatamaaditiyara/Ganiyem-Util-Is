@@ -13,40 +13,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const {isDate} = require("../../");
+const assert = require('assert');
+const {isDate} = require('../../');
 
 /**
  */
-describe("isDate", () => {
+describe('isDate', () => {
 	/**
 	 */
-	it("type of function", () => {
-		assert.strictEqual(typeof isDate, "function");
+	it('type of function', () => {
+		assert.strictEqual(typeof isDate, 'function');
 	});
 
 	/**
 	 */
-	it("isDate() === false", () => {
+	it('isDate() === false', () => {
 		assert.ok(!isDate());
 	});
 
 	/**
 	 */
-	it("isDate(new Date()) === true", () => {
+	it('isDate(new Date()) === true', () => {
 		assert.ok(isDate(new Date()));
 	});
 
 	/**
 	 */
-	it("isDate(new ObjectDate()) === true", () => {
+	it('isDate(new ObjectDate()) === true', () => {
 		class ObjectDate extends Date{}
 		assert.ok(isDate(new ObjectDate()));
 	});
 	
 	/**
 	 */
-	it("isDate([]) === false", () => {
+	it('isDate([]) === false', () => {
 		assert.ok(!isDate([]));
 	});
 });

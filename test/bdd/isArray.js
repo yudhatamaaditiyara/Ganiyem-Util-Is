@@ -13,52 +13,52 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const {isArray} = require("../../");
+const assert = require('assert');
+const {isArray} = require('../../');
 
 /**
  */
-describe("isArray", () => {
+describe('isArray', () => {
 	/**
 	 */
-	it("type of function", () => {
-		assert.strictEqual(typeof isArray, "function");
+	it('type of function', () => {
+		assert.strictEqual(typeof isArray, 'function');
 	});
 
 	/**
 	 */
-	it("isArray() === false", () => {
+	it('isArray() === false', () => {
 		assert.ok(!isArray());
 	});
 
 	/**
 	 */
-	it("isArray([]) === true", () => {
+	it('isArray([]) === true', () => {
 		assert.ok(isArray([]));
 	});
 
 	/**
 	 */
-	it("isArray(new Array()) === true", () => {
+	it('isArray(new Array()) === true', () => {
 		assert.ok(isArray([]));
 	});
 
 	/**
 	 */
-	it("isArray(new ObjectArray()) === true", () => {
+	it('isArray(new ObjectArray()) === true', () => {
 		class ObjectArray extends Array{}
 		assert.ok(isArray(new ObjectArray()));
 	});
 
 	/**
 	 */
-	it("isArray(new ArrayBuffer()) === false", () => {
+	it('isArray(new ArrayBuffer()) === false', () => {
 		assert.ok(!isArray(new ArrayBuffer()));
 	});
 	
 	/**
 	 */
-	it("isArray({}) === false", () => {
+	it('isArray({}) === false', () => {
 		assert.ok(!isArray({}));
 	});
 });

@@ -13,33 +13,33 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const {isNull} = require("../../");
+const assert = require('assert');
+const {isNull} = require('../../');
 
 /**
  */
-describe("isNull", () => {
+describe('isNull', () => {
 	/**
 	 */
-	it("type of function", () => {
-		assert.strictEqual(typeof isNull, "function");
+	it('type of function', () => {
+		assert.strictEqual(typeof isNull, 'function');
 	});
 
 	/**
 	 */
-	it("isNull() === false", () => {
+	it('isNull() === false', () => {
 		assert.ok(!isNull());
 	});
 
 	/**
 	 */
-	it("isNull(null) === true", () => {
+	it('isNull(null) === true', () => {
 		assert.ok(isNull(null));
 	});
 	
 	/**
 	 */
-	it("isNull(undefined) === false", () => {
+	it('isNull(undefined) === false', () => {
 		assert.ok(!isNull(undefined));
 	});
 });

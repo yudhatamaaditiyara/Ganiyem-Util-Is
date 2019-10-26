@@ -13,40 +13,40 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const {isError} = require("../../");
+const assert = require('assert');
+const {isError} = require('../../');
 
 /**
  */
-describe("isError", () => {
+describe('isError', () => {
 	/**
 	 */
-	it("type of function", () => {
-		assert.strictEqual(typeof isError, "function");
+	it('type of function', () => {
+		assert.strictEqual(typeof isError, 'function');
 	});
 
 	/**
 	 */
-	it("isError() === false", () => {
+	it('isError() === false', () => {
 		assert.ok(!isError());
     });
 
 	/**
 	 */
-	it("isError(new Error()) === true", () => {
+	it('isError(new Error()) === true', () => {
 		assert.ok(isError(new Error()));
     });
 
     /**
 	 */
-	it("isError(new TypeError()) === true", () => {
+	it('isError(new TypeError()) === true', () => {
         class TypeError extends Error{}
 		assert.ok(isError(new TypeError()));
     });
 
     /**
 	 */
-	it("isError(null) === false", () => {
+	it('isError(null) === false', () => {
 		assert.ok(!isError(null));
     });
 });

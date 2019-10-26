@@ -13,39 +13,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const {isSymbol} = require("../../");
+const assert = require('assert');
+const {isSymbol} = require('../../');
 
 /**
  */
-describe("isSymbol", () => {
+describe('isSymbol', () => {
 	/**
 	 */
-	it("type of function", () => {
-		assert.strictEqual(typeof isSymbol, "function");
+	it('type of function', () => {
+		assert.strictEqual(typeof isSymbol, 'function');
 	});
 
 	/**
 	 */
-	it("isSymbol() === false", () => {
+	it('isSymbol() === false', () => {
 		assert.ok(!isSymbol());
     });
 
     /**
 	 */
-	it("isSymbol(Symbol('foo')) === true", () => {
-		assert.ok(isSymbol(Symbol("foo")));
+	it('isSymbol(Symbol("foo")) === true', () => {
+		assert.ok(isSymbol(Symbol('foo')));
     });
 
     /**
 	 */
-	it("isSymbol('foo') === false", () => {
-		assert.ok(!isSymbol("foo"));
+	it('isSymbol("foo") === false', () => {
+		assert.ok(!isSymbol('foo'));
     });
     
     /**
 	 */
-	it("isSymbol(123) === false", () => {
+	it('isSymbol(123) === false', () => {
 		assert.ok(!isSymbol(123));
     });
 });

@@ -13,39 +13,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const {isNullOrUndefined} = require("../../");
+const assert = require('assert');
+const {isNullOrUndefined} = require('../../');
 
 /**
  */
-describe("isNullOrUndefined", () => {
+describe('isNullOrUndefined', () => {
 	/**
 	 */
-	it("type of function", () => {
-		assert.strictEqual(typeof isNullOrUndefined, "function");
+	it('type of function', () => {
+		assert.strictEqual(typeof isNullOrUndefined, 'function');
 	});
 
 	/**
 	 */
-	it("isNullOrUndefined() === true", () => {
+	it('isNullOrUndefined() === true', () => {
 		assert.ok(isNullOrUndefined());
 	});
 
 	/**
 	 */
-	it("isNullOrUndefined(null) === true", () => {
+	it('isNullOrUndefined(null) === true', () => {
 		assert.ok(isNullOrUndefined(null));
 	});
 	
 	/**
 	 */
-	it("isNullOrUndefined(undefined) === true", () => {
+	it('isNullOrUndefined(undefined) === true', () => {
 		assert.ok(isNullOrUndefined(undefined));
 	});
 
 	/**
 	 */
-	it("isNullOrUndefined(123) === false", () => {
+	it('isNullOrUndefined(123) === false', () => {
 		assert.ok(!isNullOrUndefined(123));
 	});
 });

@@ -13,57 +13,57 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const {isObject} = require("../../");
+const assert = require('assert');
+const {isObject} = require('../../');
 
 /**
  */
-describe("isObject", () => {
+describe('isObject', () => {
 	/**
 	 */
-	it("type of function", () => {
-		assert.strictEqual(typeof isObject, "function");
+	it('type of function', () => {
+		assert.strictEqual(typeof isObject, 'function');
 	});
 
 	/**
 	 */
-	it("isObject() === false", () => {
+	it('isObject() === false', () => {
 		assert.ok(!isObject());
 	});
 
 	/**
 	 */
-	it("isObject({}) === true", () => {
+	it('isObject({}) === true', () => {
 		assert.ok(isObject({}));
     });
 
     /**
 	 */
-	it("isObject([]]) === true", () => {
+	it('isObject([]]) === true', () => {
 		assert.ok(isObject([]));
     });
 
     /**
 	 */
-	it("isObject(new Date()) === true", () => {
+	it('isObject(new Date()) === true', () => {
 		assert.ok(isObject(new Date()));
 	});
     
     /**
 	 */
-	it("isObject(new Object()) === true", () => {
+	it('isObject(new Object()) === true', () => {
 		assert.ok(isObject(new Object()));
     });
     
     /**
 	 */
-	it("isObject(null) === false", () => {
+	it('isObject(null) === false', () => {
 		assert.ok(!isObject(null));
     });
 
     /**
 	 */
-	it("isObject(undefined) === false", () => {
+	it('isObject(undefined) === false', () => {
 		assert.ok(!isObject(undefined));
     });
 });

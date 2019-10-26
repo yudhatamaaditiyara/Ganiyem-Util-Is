@@ -13,45 +13,45 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const {isBoolean} = require("../../");
+const assert = require('assert');
+const {isBoolean} = require('../../');
 
 /**
  */
-describe("isBoolean", () => {
+describe('isBoolean', () => {
 	/**
 	 */
-	it("type of function", () => {
-		assert.strictEqual(typeof isBoolean, "function");
+	it('type of function', () => {
+		assert.strictEqual(typeof isBoolean, 'function');
 	});
 
 	/**
 	 */
-	it("isBoolean() === false", () => {
+	it('isBoolean() === false', () => {
 		assert.ok(!isBoolean());
 	});
 
 	/**
 	 */
-	it("isBoolean(true) === true", () => {
+	it('isBoolean(true) === true', () => {
 		assert.ok(isBoolean(true));
 	});
 
 	/**
 	 */
-	it("isBoolean(false) === true", () => {
+	it('isBoolean(false) === true', () => {
 		assert.ok(isBoolean(false));
 	});
 
 	/**
 	 */
-	it("isBoolean(new Boolean()) === false", () => {
+	it('isBoolean(new Boolean()) === false', () => {
 		assert.ok(!isBoolean(new Boolean()));
 	});
 	
 	/**
 	 */
-	it("isBoolean(1) === false", () => {
+	it('isBoolean(1) === false', () => {
 		assert.ok(!isBoolean(1));
 	});
 });

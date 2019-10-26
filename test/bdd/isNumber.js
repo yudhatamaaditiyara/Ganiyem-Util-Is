@@ -13,39 +13,39 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-const assert = require("assert");
-const {isNumber} = require("../../");
+const assert = require('assert');
+const {isNumber} = require('../../');
 
 /**
  */
-describe("isNumber", () => {
+describe('isNumber', () => {
 	/**
 	 */
-	it("type of function", () => {
-		assert.strictEqual(typeof isNumber, "function");
+	it('type of function', () => {
+		assert.strictEqual(typeof isNumber, 'function');
 	});
 
 	/**
 	 */
-	it("isNumber() === false", () => {
+	it('isNumber() === false', () => {
 		assert.ok(!isNumber());
 	});
 
 	/**
 	 */
-	it("isNumber(123) === true", () => {
+	it('isNumber(123) === true', () => {
 		assert.ok(isNumber(123));
 	});
 	
 	/**
 	 */
-	it("isNumber(new Number(123)) === false", () => {
+	it('isNumber(new Number(123)) === false', () => {
 		assert.ok(!isNumber(new Number(123)));
 	});
 
 	/**
 	 */
-	it("isNumber(new Number()) === false", () => {
+	it('isNumber(new Number()) === false', () => {
 		assert.ok(!isNumber(new Number()));
 	});
 });
