@@ -16,36 +16,24 @@
 const assert = require('assert');
 const {isUndefined} = require('../../');
 
-/**
- */
 describe('isUndefined', () => {
-	/**
-	 */
-	it('type of function', () => {
-		assert.strictEqual(typeof isUndefined, 'function');
-	});
+  it('must be typeof function', () => {
+    assert.ok(typeof isUndefined === 'function');
+  });
 
-	/**
-	 */
-	it('isUndefined() === true', () => {
-		assert.ok(isUndefined());
-    });
+  it('must be isUndefined() === true', () => {
+    assert.ok(isUndefined());
+  });
 
-	/**
-	 */
-	it('isUndefined(undefined) === true', () => {
-		assert.ok(isUndefined(undefined));
-    });
+  it('must be isUndefined(undefined) === true', () => {
+    assert.ok(isUndefined(undefined));
+  });
 
-    /**
-	 */
-	it('isUndefined(null) === false', () => {
-		assert.ok(!isUndefined(null));
-    });
-    
-    /**
-	 */
-	it('isUndefined(123) === false', () => {
-		assert.ok(!isUndefined(123));
-    });
+  it('must be isUndefined(null) === false', () => {
+    assert.ok(!isUndefined(null));
+  });
+
+  it('must be isUndefined(123) === false', () => {
+    assert.ok(!isUndefined(123));
+  });
 });

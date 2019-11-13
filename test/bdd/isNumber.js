@@ -16,36 +16,24 @@
 const assert = require('assert');
 const {isNumber} = require('../../');
 
-/**
- */
 describe('isNumber', () => {
-	/**
-	 */
-	it('type of function', () => {
-		assert.strictEqual(typeof isNumber, 'function');
-	});
+  it('must be typeof function', () => {
+    assert.ok(typeof isNumber === 'function');
+  });
 
-	/**
-	 */
-	it('isNumber() === false', () => {
-		assert.ok(!isNumber());
-	});
+  it('must be isNumber() === false', () => {
+    assert.ok(!isNumber());
+  });
 
-	/**
-	 */
-	it('isNumber(123) === true', () => {
-		assert.ok(isNumber(123));
-	});
-	
-	/**
-	 */
-	it('isNumber(new Number(123)) === false', () => {
-		assert.ok(!isNumber(new Number(123)));
-	});
+  it('must be isNumber(123) === true', () => {
+    assert.ok(isNumber(123));
+  });
 
-	/**
-	 */
-	it('isNumber(new Number()) === false', () => {
-		assert.ok(!isNumber(new Number()));
-	});
+  it('must be isNumber(new Number(123)) === false', () => {
+    assert.ok(!isNumber(new Number(123)));
+  });
+
+  it('must be isNumber(new Number()) === false', () => {
+    assert.ok(!isNumber(new Number()));
+  });
 });

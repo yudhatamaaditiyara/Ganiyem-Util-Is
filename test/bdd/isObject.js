@@ -16,54 +16,36 @@
 const assert = require('assert');
 const {isObject} = require('../../');
 
-/**
- */
 describe('isObject', () => {
-	/**
-	 */
-	it('type of function', () => {
-		assert.strictEqual(typeof isObject, 'function');
-	});
+  it('must be typeof function', () => {
+    assert.ok(typeof isObject === 'function');
+  });
 
-	/**
-	 */
-	it('isObject() === false', () => {
-		assert.ok(!isObject());
-	});
+  it('must be isObject() === false', () => {
+    assert.ok(!isObject());
+  });
 
-	/**
-	 */
-	it('isObject({}) === true', () => {
-		assert.ok(isObject({}));
-    });
+  it('must be isObject({}) === true', () => {
+    assert.ok(isObject({}));
+  });
 
-    /**
-	 */
-	it('isObject([]]) === true', () => {
-		assert.ok(isObject([]));
-    });
+  it('must be isObject([]]) === true', () => {
+    assert.ok(isObject([]));
+  });
 
-    /**
-	 */
-	it('isObject(new Date()) === true', () => {
-		assert.ok(isObject(new Date()));
-	});
-    
-    /**
-	 */
-	it('isObject(new Object()) === true', () => {
-		assert.ok(isObject(new Object()));
-    });
-    
-    /**
-	 */
-	it('isObject(null) === false', () => {
-		assert.ok(!isObject(null));
-    });
+  it('must be isObject(new Date()) === true', () => {
+    assert.ok(isObject(new Date()));
+  });
 
-    /**
-	 */
-	it('isObject(undefined) === false', () => {
-		assert.ok(!isObject(undefined));
-    });
+  it('must be isObject(new Object()) === true', () => {
+    assert.ok(isObject(new Object()));
+  });
+
+  it('must be isObject(null) === false', () => {
+    assert.ok(!isObject(null));
+  });
+
+  it('must be isObject(undefined) === false', () => {
+    assert.ok(!isObject(undefined));
+  });
 });

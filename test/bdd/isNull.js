@@ -16,30 +16,20 @@
 const assert = require('assert');
 const {isNull} = require('../../');
 
-/**
- */
 describe('isNull', () => {
-	/**
-	 */
-	it('type of function', () => {
-		assert.strictEqual(typeof isNull, 'function');
-	});
+  it('must be typeof function', () => {
+    assert.ok(typeof isNull === 'function');
+  });
 
-	/**
-	 */
-	it('isNull() === false', () => {
-		assert.ok(!isNull());
-	});
+  it('must be isNull() === false', () => {
+    assert.ok(!isNull());
+  });
 
-	/**
-	 */
-	it('isNull(null) === true', () => {
-		assert.ok(isNull(null));
-	});
-	
-	/**
-	 */
-	it('isNull(undefined) === false', () => {
-		assert.ok(!isNull(undefined));
-	});
+  it('must be isNull(null) === true', () => {
+    assert.ok(isNull(null));
+  });
+
+  it('must be isNull(undefined) === false', () => {
+    assert.ok(!isNull(undefined));
+  });
 });

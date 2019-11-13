@@ -16,42 +16,28 @@
 const assert = require('assert');
 const {isString} = require('../../');
 
-/**
- */
 describe('isString', () => {
-	/**
-	 */
-	it('type of function', () => {
-		assert.strictEqual(typeof isString, 'function');
-	});
+  it('must be typeof function', () => {
+    assert.ok(typeof isString === 'function');
+  });
 
-	/**
-	 */
-	it('isString() === false', () => {
-		assert.ok(!isString());
-    });
+  it('must be isString() === false', () => {
+    assert.ok(!isString());
+  });
 
-    /**
-	 */
-	it('isString("foo") === true', () => {
-		assert.ok(isString('foo'));
-    });
+  it('must be isString("foo") === true', () => {
+    assert.ok(isString('foo'));
+  });
 
-    /**
-	 */
-	it('isString(new String("foo")) === false', () => {
-		assert.ok(!isString(new String('foo')));
-    });
+  it('must be isString(new String("foo")) === false', () => {
+    assert.ok(!isString(new String('foo')));
+  });
 
-    /**
-	 */
-	it('isString(Symbol("foo")) === false', () => {
-		assert.ok(!isString(Symbol('foo')));
-    });
-    
-    /**
-	 */
-	it('isString(123) === false', () => {
-		assert.ok(!isString(123));
-    });
+  it('must be isString(Symbol("foo")) === false', () => {
+    assert.ok(!isString(Symbol('foo')));
+  });
+
+  it('must be isString(123) === false', () => {
+    assert.ok(!isString(123));
+  });
 });

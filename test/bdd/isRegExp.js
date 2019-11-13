@@ -16,36 +16,24 @@
 const assert = require('assert');
 const {isRegExp} = require('../../');
 
-/**
- */
 describe('isRegExp', () => {
-	/**
-	 */
-	it('type of function', () => {
-		assert.strictEqual(typeof isRegExp, 'function');
-	});
+  it('must be typeof function', () => {
+    assert.ok(typeof isRegExp === 'function');
+  });
 
-	/**
-	 */
-	it('isRegExp() === false', () => {
-		assert.ok(!isRegExp());
-    });
+  it('must be isRegExp() === false', () => {
+    assert.ok(!isRegExp());
+  });
 
-    /**
-	 */
-	it('isRegExp(/foo/) === true', () => {
-		assert.ok(isRegExp(/foo/));
-    });
+  it('must be isRegExp(/foo/) === true', () => {
+    assert.ok(isRegExp(/foo/));
+  });
 
-    /**
-	 */
-	it('isRegExp(new RegExp("foo")) === true', () => {
-		assert.ok(isRegExp(new RegExp('foo')));
-    });
+  it('must be isRegExp(new RegExp("foo")) === true', () => {
+    assert.ok(isRegExp(new RegExp('foo')));
+  });
 
-    /**
-	 */
-	it('isRegExp("foo") === false', () => {
-		assert.ok(!isRegExp('foo'));
-    });
+  it('must be isRegExp("foo") === false', () => {
+    assert.ok(!isRegExp('foo'));
+  });
 });

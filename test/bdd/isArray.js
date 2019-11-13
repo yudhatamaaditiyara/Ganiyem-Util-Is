@@ -16,49 +16,33 @@
 const assert = require('assert');
 const {isArray} = require('../../');
 
-/**
- */
 describe('isArray', () => {
-	/**
-	 */
-	it('type of function', () => {
-		assert.strictEqual(typeof isArray, 'function');
-	});
+  it('must be typeof function', () => {
+    assert.ok(typeof isArray === 'function');
+  });
 
-	/**
-	 */
-	it('isArray() === false', () => {
-		assert.ok(!isArray());
-	});
+  it('must be isArray() === false', () => {
+    assert.ok(!isArray());
+  });
 
-	/**
-	 */
-	it('isArray([]) === true', () => {
-		assert.ok(isArray([]));
-	});
+  it('must be isArray([]) === true', () => {
+    assert.ok(isArray([]));
+  });
 
-	/**
-	 */
-	it('isArray(new Array()) === true', () => {
-		assert.ok(isArray([]));
-	});
+  it('must be isArray(new Array()) === true', () => {
+    assert.ok(isArray([]));
+  });
 
-	/**
-	 */
-	it('isArray(new ObjectArray()) === true', () => {
-		class ObjectArray extends Array{}
-		assert.ok(isArray(new ObjectArray()));
-	});
+  it('must be isArray(new ObjectArray()) === true', () => {
+    class ObjectArray extends Array{}
+    assert.ok(isArray(new ObjectArray()));
+  });
 
-	/**
-	 */
-	it('isArray(new ArrayBuffer()) === false', () => {
-		assert.ok(!isArray(new ArrayBuffer()));
-	});
-	
-	/**
-	 */
-	it('isArray({}) === false', () => {
-		assert.ok(!isArray({}));
-	});
+  it('must be isArray(new ArrayBuffer()) === false', () => {
+    assert.ok(!isArray(new ArrayBuffer()));
+  });
+
+  it('must be isArray({}) === false', () => {
+    assert.ok(!isArray({}));
+  });
 });

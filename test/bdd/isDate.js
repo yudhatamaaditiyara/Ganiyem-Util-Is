@@ -16,37 +16,25 @@
 const assert = require('assert');
 const {isDate} = require('../../');
 
-/**
- */
 describe('isDate', () => {
-	/**
-	 */
-	it('type of function', () => {
-		assert.strictEqual(typeof isDate, 'function');
-	});
+  it('must be typeof function', () => {
+    assert.ok(typeof isDate === 'function');
+  });
 
-	/**
-	 */
-	it('isDate() === false', () => {
-		assert.ok(!isDate());
-	});
+  it('must be isDate() === false', () => {
+    assert.ok(!isDate());
+  });
 
-	/**
-	 */
-	it('isDate(new Date()) === true', () => {
-		assert.ok(isDate(new Date()));
-	});
+  it('must be isDate(new Date()) === true', () => {
+    assert.ok(isDate(new Date()));
+  });
 
-	/**
-	 */
-	it('isDate(new ObjectDate()) === true', () => {
-		class ObjectDate extends Date{}
-		assert.ok(isDate(new ObjectDate()));
-	});
-	
-	/**
-	 */
-	it('isDate([]) === false', () => {
-		assert.ok(!isDate([]));
-	});
+  it('must be isDate(new ObjectDate()) === true', () => {
+    class ObjectDate extends Date{}
+    assert.ok(isDate(new ObjectDate()));
+  });
+
+  it('must be isDate([]) === false', () => {
+    assert.ok(!isDate([]));
+  });
 });

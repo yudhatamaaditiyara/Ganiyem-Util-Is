@@ -16,36 +16,24 @@
 const assert = require('assert');
 const {isSymbol} = require('../../');
 
-/**
- */
 describe('isSymbol', () => {
-	/**
-	 */
-	it('type of function', () => {
-		assert.strictEqual(typeof isSymbol, 'function');
-	});
+  it('must be typeof function', () => {
+    assert.ok(typeof isSymbol === 'function');
+  });
 
-	/**
-	 */
-	it('isSymbol() === false', () => {
-		assert.ok(!isSymbol());
-    });
+  it('must be isSymbol() === false', () => {
+    assert.ok(!isSymbol());
+  });
 
-    /**
-	 */
-	it('isSymbol(Symbol("foo")) === true', () => {
-		assert.ok(isSymbol(Symbol('foo')));
-    });
+  it('must be isSymbol(Symbol("foo")) === true', () => {
+    assert.ok(isSymbol(Symbol('foo')));
+  });
 
-    /**
-	 */
-	it('isSymbol("foo") === false', () => {
-		assert.ok(!isSymbol('foo'));
-    });
-    
-    /**
-	 */
-	it('isSymbol(123) === false', () => {
-		assert.ok(!isSymbol(123));
-    });
+  it('must be isSymbol("foo") === false', () => {
+    assert.ok(!isSymbol('foo'));
+  });
+
+  it('must be isSymbol(123) === false', () => {
+    assert.ok(!isSymbol(123));
+  });
 });

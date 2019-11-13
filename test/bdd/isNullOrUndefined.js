@@ -16,36 +16,24 @@
 const assert = require('assert');
 const {isNullOrUndefined} = require('../../');
 
-/**
- */
 describe('isNullOrUndefined', () => {
-	/**
-	 */
-	it('type of function', () => {
-		assert.strictEqual(typeof isNullOrUndefined, 'function');
-	});
+  it('must be typeof function', () => {
+    assert.ok(typeof isNullOrUndefined === 'function');
+  });
 
-	/**
-	 */
-	it('isNullOrUndefined() === true', () => {
-		assert.ok(isNullOrUndefined());
-	});
+  it('must be isNullOrUndefined() === true', () => {
+    assert.ok(isNullOrUndefined());
+  });
 
-	/**
-	 */
-	it('isNullOrUndefined(null) === true', () => {
-		assert.ok(isNullOrUndefined(null));
-	});
-	
-	/**
-	 */
-	it('isNullOrUndefined(undefined) === true', () => {
-		assert.ok(isNullOrUndefined(undefined));
-	});
+  it('must be isNullOrUndefined(null) === true', () => {
+    assert.ok(isNullOrUndefined(null));
+  });
 
-	/**
-	 */
-	it('isNullOrUndefined(123) === false', () => {
-		assert.ok(!isNullOrUndefined(123));
-	});
+  it('must be isNullOrUndefined(undefined) === true', () => {
+    assert.ok(isNullOrUndefined(undefined));
+  });
+
+  it('must be isNullOrUndefined(123) === false', () => {
+    assert.ok(!isNullOrUndefined(123));
+  });
 });

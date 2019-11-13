@@ -16,59 +16,41 @@
 const assert = require('assert');
 const {isFunction} = require('../../');
 
-/**
- */
 describe('isFunction', () => {
-	/**
-	 */
-	it('type of function', () => {
-		assert.strictEqual(typeof isFunction, 'function');
-	});
+  it('must be typeof function', () => {
+    assert.ok(typeof isFunction === 'function');
+  });
 
-	/**
-	 */
-	it('isFunction() === false', () => {
-		assert.ok(!isFunction());
-	});
+  it('must be isFunction() === false', () => {
+    assert.ok(!isFunction());
+  });
 
-	/**
-	 */
-	it('isFunction(() => {}) === true', () => {
-		assert.ok(isFunction(() => {}));
-	});
+  it('must be isFunction(() => {}) === true', () => {
+    assert.ok(isFunction(() => {}));
+  });
 
-	/**
-	 */
-	it('isFunction(function(){}) === true', () => {
-		assert.ok(isFunction(function (){}));
-	});
+  it('must be isFunction(function(){}) === true', () => {
+    assert.ok(isFunction(function (){}));
+  });
 
-	/**
-	 */
-	it('isFunction(function *(){...}) === true', () => {
-		assert.ok(isFunction(function *(){
-			for (let i = 0; i < 10; ++i) {
-				yield i;
-			}
-		}));
-	});
+  it('must be isFunction(function *(){...}) === true', () => {
+    assert.ok(isFunction(function *(){
+      for (let i = 0; i < 10; ++i) {
+        yield i;
+      }
+    }));
+  });
 
-	/**
-	 */
-	it('isFunction(new Function()) === true', () => {
-		assert.ok(isFunction(new Function()));
-	});
+  it('must be isFunction(new Function()) === true', () => {
+    assert.ok(isFunction(new Function()));
+  });
 
-	/**
-	 */
-	it('isFunction(new ObjectFunction()) === true', () => {
-		class ObjectFunction extends Function{}
-		assert.ok(isFunction(new ObjectFunction()));
-	});
+  it('must be isFunction(new ObjectFunction()) === true', () => {
+    class ObjectFunction extends Function{}
+    assert.ok(isFunction(new ObjectFunction()));
+  });
 
-	/**
-	 */
-	it('isFunction(null) === false', () => {
-		assert.ok(!isFunction(null));
-	});
+  it('must be isFunction(null) === false', () => {
+    assert.ok(!isFunction(null));
+  });
 });

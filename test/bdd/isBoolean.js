@@ -16,42 +16,28 @@
 const assert = require('assert');
 const {isBoolean} = require('../../');
 
-/**
- */
 describe('isBoolean', () => {
-	/**
-	 */
-	it('type of function', () => {
-		assert.strictEqual(typeof isBoolean, 'function');
-	});
+  it('must be typeof function', () => {
+    assert.ok(typeof isBoolean === 'function');
+  });
 
-	/**
-	 */
-	it('isBoolean() === false', () => {
-		assert.ok(!isBoolean());
-	});
+  it('must be isBoolean() === false', () => {
+    assert.ok(!isBoolean());
+  });
 
-	/**
-	 */
-	it('isBoolean(true) === true', () => {
-		assert.ok(isBoolean(true));
-	});
+  it('must be isBoolean(true) === true', () => {
+    assert.ok(isBoolean(true));
+  });
 
-	/**
-	 */
-	it('isBoolean(false) === true', () => {
-		assert.ok(isBoolean(false));
-	});
+  it('must be isBoolean(false) === true', () => {
+    assert.ok(isBoolean(false));
+  });
 
-	/**
-	 */
-	it('isBoolean(new Boolean()) === false', () => {
-		assert.ok(!isBoolean(new Boolean()));
-	});
-	
-	/**
-	 */
-	it('isBoolean(1) === false', () => {
-		assert.ok(!isBoolean(1));
-	});
+  it('must be isBoolean(new Boolean()) === false', () => {
+    assert.ok(!isBoolean(new Boolean()));
+  });
+
+  it('must be isBoolean(1) === false', () => {
+    assert.ok(!isBoolean(1));
+  });
 });

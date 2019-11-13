@@ -16,37 +16,25 @@
 const assert = require('assert');
 const {isError} = require('../../');
 
-/**
- */
 describe('isError', () => {
-	/**
-	 */
-	it('type of function', () => {
-		assert.strictEqual(typeof isError, 'function');
-	});
+  it('must be typeof function', () => {
+    assert.ok(typeof isError === 'function');
+  });
 
-	/**
-	 */
-	it('isError() === false', () => {
-		assert.ok(!isError());
-    });
+  it('must be isError() === false', () => {
+    assert.ok(!isError());
+  });
 
-	/**
-	 */
-	it('isError(new Error()) === true', () => {
-		assert.ok(isError(new Error()));
-    });
+  it('must be isError(new Error()) === true', () => {
+    assert.ok(isError(new Error()));
+  });
 
-    /**
-	 */
-	it('isError(new TypeError()) === true', () => {
-        class TypeError extends Error{}
-		assert.ok(isError(new TypeError()));
-    });
+  it('must be isError(new TypeError()) === true', () => {
+    class TypeError extends Error{}
+    assert.ok(isError(new TypeError()));
+  });
 
-    /**
-	 */
-	it('isError(null) === false', () => {
-		assert.ok(!isError(null));
-    });
+  it('must be isError(null) === false', () => {
+    assert.ok(!isError(null));
+  });
 });
